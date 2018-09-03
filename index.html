@@ -1,10 +1,10 @@
 <script>
-var ws = new WebSocket("wss://mathfront.org/websocket/", "TPDprotocol");
+var ws = new WebSocket("wss://mathfront.org/websocket/websocket", "TPDprotocol");
   
   ws.onopen = function(e) {
    console.log("Connection established");
 };
-  ws.send("hello I is websocket");
+  //ws.send("hello I is websocket");
   ws.onclose = function(e) {
    console.log("Connection closed", e);
 };
