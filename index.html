@@ -1,10 +1,17 @@
 <script>
-var ws = new WebSocket("wss://echo.websocket.org", "TPDprotocol");
+var ws = new WebSocket("wss://mathfront.org/websocket/", "TPDprotocol");
   
   ws.onopen = function(e) {
    console.log("Connection established");
 };
-  
+  ws.send("hello I is websocket");
+  ws.onclose = function(e) {
+   console.log("Connection closed", e);
+};
+  ws.onmessage = function(e) {
+      console.log("Message received", e, e.data);
+};
+  ws.close(1000, "Closing Connection Normally");
   //speed required
   //speed required
   //speed required
