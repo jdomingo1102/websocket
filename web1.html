@@ -1,10 +1,17 @@
 <script>
-var exampleSocket = new WebSocket("wss://echo.websocket.org", "TPDchat1090");
-exampleSocket.onopen = function (event) {
+  window.addEventListener("load", onLoad, false);
+               
+					
+               function onLoad() {
+                  var wsUri = "wss://echo.websocket.org";
+                  exampleSocket = new WebSocket(wsUri, "TPDchat1090");
+                 exampleSocket.onopen = function (event) {
   exampleSocket.send("TPD test DOES IT WORK"); 
 };
 exampleSocket.onmessage = function (event) {
   console.log("Message: |" + event.data + "|");
 }
 setTimeout(function(){exampleSocket.close();}, 2000);
+               }
+
 </script>
