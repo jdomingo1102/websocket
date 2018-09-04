@@ -132,7 +132,7 @@
                }
 					
                function onLoad() {
-                  var wsUri = "wss://echo.websocket.org";
+                  var wsUri = "wss://echo.websocket.org/TPDcomm1234";
                   websocket = new WebSocket(wsUri);
                   websocket.onopen = function(evt) { onOpen(evt) };
                   websocket.onclose = function(evt) { onClose(evt) };
@@ -161,7 +161,7 @@
                      message = message.slice("log:".length);
                      log.innerHTML = '<li class = "message">' + 
                         message + "</li>" + log.innerHTML;
-                  }else if (message.startsWith("connected:")) {
+                  } else if (message.startsWith("connected:")) {
                      message = message.slice("connected:".length);
                      connected.innerHTML = message;
                   }
