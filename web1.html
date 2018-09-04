@@ -132,7 +132,7 @@
                }
 					
                function onLoad() {
-                  var wsUri = "ws://127.0.0.1:7777";
+                  var wsUri = "wss://echo.websocket.org";
                   websocket = new WebSocket(wsUri);
                   websocket.onopen = function(evt) { onOpen(evt) };
                   websocket.onclose = function(evt) { onClose(evt) };
@@ -177,22 +177,6 @@
                   chat.value = "";
                   websocket.send(message);
                }
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
-		//hi
 		//hi
 		
             </script>
