@@ -4,7 +4,7 @@
 					
                function onLoad() {
                   var wsUri = "wss://echo.websocket.org";
-                  exampleSocket = new WebSocket(wsUri, "TPDchat1090");
+                  exampleSocket = new WebSocket(wsUri);
                  exampleSocket.onopen = function (event) {
   exampleSocket.send("TPD test DOES IT WORK"); 
 };
